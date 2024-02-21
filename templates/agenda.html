@@ -16,7 +16,14 @@
     </a>
     <ul>
         {% for evento in eventos %}
-        <li>{{evento.titulo}} - {{evento.get_data_evento}}</li>
+        <li>{{evento.titulo}} - {{evento.get_data_evento}} 
+            <a href="evento/?id={{evento.id}}">
+                <button type="button">Editar</button> 
+            </a> 
+            <a href="evento/delete/{{evento.id}}/">
+                <button type="button">Excluir</button>
+            </a>        
+    </li>
         {% endfor %}
     </ul>
 </body>
