@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Agenda</title>
-        <div align="right">
-            <a href="/logout">Logout</a>
-        </div>        
-    </head>
-    <body>
-        <h2 >Agendamentos</h2>
-        <ul>
-            {% for evento in eventos %}
-            <li>{{evento.titulo}} - {{evento.get_data_evento}}</li>
-            {% endfor %}
-        </ul>
-    </body>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Agenda</title>
+    <div align="right">
+        <a href="/logout">Logout</a>
+    </div>
+</head>
+
+<body>
+    <h2>Agendamentos</h2>
+    <a href="evento">
+        <button type="button">Novo Evento</button>
+    </a>
+    <ul>
+        {% for evento in eventos %}
+        <li>{{evento.titulo}} - {{evento.get_data_evento}}</li>
+        {% endfor %}
+    </ul>
+</body>
+
 </html>
